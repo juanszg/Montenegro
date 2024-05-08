@@ -1,0 +1,121 @@
+---
+import Menu from "../components/Menu.astro";
+import DarkMenu from "../components/BotonDark.astro";
+---
+
+<html lang="es">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <Menu />
+
+        <div class="contactito">
+            <form
+                action="mailto:ventas@economicsales.com"
+                method="post"
+                enctype="text/plain"
+            >
+                <label for="nombre"><b>Nombre</b></label>
+                <input type="text" id="nombre" name="nombre" required /><br
+                /><br />
+
+                <label for="correo"><b>Correo electronico</b><br /></label>
+                <input type="email" id="correo" name="correo" required /><br
+                /><br />
+
+                <label for="mensaje"><b>Mensaje</b></label><br />
+                <textarea id="mensaje" name="mensaje" rows="2" required
+                ></textarea><br />
+                <div class="enviar">
+                    <input class="bg-primary" type="submit" value="Enviar" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
+<style>
+    /*----------------------------- FORMULARIO ------------------------------------*/
+    /*
+.contactito {
+  position: relative;
+  top: -90px;
+  left: 25%;
+  width: 50%;
+  font-size: 30px;
+  font-family: montserrat;
+  text-align: center;
+  outline: 0;
+  border: none;
+  color: white;
+  /*margin-bottom: 45px;*/
+    .contactito {
+        text-align: center;
+        position: relative;
+        left: 25%;
+        width: 50%;
+        color: rgb(0, 0, 0);
+        margin-top: 3em;
+        font-size: 1.2em;
+        font-family: raleway;
+        margin-bottom: 3em;
+    }
+
+    .contactito form nombre {
+        background-color: #653535 !important;
+    }
+
+    .contactito form textarea,
+    .contactito form input {
+        font-family: raleway;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        width: 100%;
+        /*background: none;*/
+        border: none;
+        border-bottom: 3px solid rgb(176, 0, 0);
+        background-color: rgb(255, 255, 255);
+    }
+    body.dark .contactito form input {
+        color: whitesmoke;
+        background-color: black;
+        border-bottom: 3px solid rgb(255, 255, 255);
+    }
+    body.dark .contactito form textarea {
+        color: whitesmoke;
+        background-color: black;
+        border-bottom: 3px solid rgb(255, 255, 255);
+    }
+
+    .enviar {
+        margin-top: 25px;
+    }
+    body.dark h1 {
+        color: aliceblue;
+    }
+    body.dark .contactito {
+        color: aliceblue;
+    }
+    body.dark .contactito form textarea {
+        color: dark;
+    }
+</style>
+<script>
+    var botonMenu = document.getElementsByClassName("dropdown-menu");
+    var Ocultar = document.getElementsByClassName("contactito");
+
+    botonMenu.addEventListener("click", function () {
+        if (Ocultar.style.display !== "none") {
+            Ocultar.style.display = "none";
+        } else {
+            Ocultar.style.display = "block";
+        }
+    });
+</script>
